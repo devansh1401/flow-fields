@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Fields</title>
+  <link rel="stylesheet" href="src/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="canvas1"></canvas>
-    <script src="script.js"></script>
+  <header>
+    <h1>Flow Fields</h1>
+    <p>A Generative Art Tool</p>
+  </header>
+
+  <div class="container">
+    <div class="left-section">
+      <div class="controls-panel">
+        <div class="control-group">
+          <label for="vertical-anchors">Curve</label>
+          <input type="range" id="vertical-anchors" min="0" max="100" value="50">
+        </div>
+        <div class="control-group">
+          <label for="horizontal-anchors">Zoom</label>
+          <input type="range" id="horizontal-anchors" min="0" max="100" value="50">
+        </div>
+        <div class="control-group">
+          <label for="particles">Number of Particles</label>
+          <input type="range" id="particles" min="100" max="5000" value="2000">
+        </div>
+        <div class="control-group">
+          <label for="line-opacity">Cell Size</label>
+          <input type="range" id="line-opacity" min="0" max="100" value="50">
+        </div>
+        <div class="control-group">
+          <label for="line-color">Line Color</label>
+          <input type="color" id="line-color" value="#ffffff">
+        </div>
+        <div class="control-group">
+          <label for="background-color">Background Color</label>
+          <input type="color" id="background-color" value="#222222">
+        </div>
+      </div>
+
+      <div class="button-controls">
+        <button id="github" class="btn">GitHub</button>
+        <button id="about" class="btn">About</button>
+        <button id="clear" class="btn">Clear</button>
+      </div>
+      <div class="fullscreen-button">
+        <button id="fullscreen" class="btn">Full Screen</button>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with <span class="heart">&#10084;</span> by Devansh</p>
+  </footer>
+
+  
+  <script src="src/js/particle.js"></script>
+  <script src="src/js/effect.js"></script>
+  <script src="src/js/main.js"></script>
 </body>
 </html>
